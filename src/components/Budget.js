@@ -8,14 +8,14 @@ const Budget = () => {
     
     const setBudget=(newBudget)=>{
 
-        let y=0;
-        for(let i=0;i<expenses.lenth;i++){
-            y=y+expenses[i].cost;
-        };
+        const totalExpenses = expenses.reduce((total, item) => {
+            return (total += item.cost);
+        }, 0);
+        //console.log(totalExpenses);
 
         if(newBudget>20000){
             alert("You are not allowed to have more than 20000 units of money in the budget.");
-        }else if(newBudget<y){
+        }else if(newBudget<totalExpenses){
             alert("You cannot reduce the budget value lower than the spending.");
         }else{
             dispatch({

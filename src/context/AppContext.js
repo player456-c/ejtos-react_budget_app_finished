@@ -15,7 +15,7 @@ export const AppReducer = (state, action) => {
                 y=y+state.expenses[i].cost;
             };
             total_budget = y;
-            
+
             /* total_budget = total_budget + action.payload.cost; */
             action.type = "DONE";
             if(total_budget <= state.budget) {
@@ -51,7 +51,7 @@ export const AppReducer = (state, action) => {
         case 'DELETE_EXPENSE':
             action.type = "DONE";
             state.expenses.map((currentExp)=> {
-                if (currentExp.name === action.payload) {
+                if (currentExp.id === action.payload) {
                     budget = state.budget + currentExp.cost
                     currentExp.cost =  0;
                 }
@@ -87,7 +87,7 @@ const initialState = {
         { id: "Marketing", name: 'Marketing', cost: 50 },
         { id: "Finance", name: 'Finance', cost: 300 },
         { id: "Sales", name: 'Sales', cost: 70 },
-        { id: "Human Resource", name: 'Human Resource', cost: 40 },
+        { id: "HR", name: 'Human Resource', cost: 40 },
         { id: "IT", name: 'IT', cost: 500 },
     ],
     currency: '£'
