@@ -21,9 +21,9 @@ const Currency = (props) => {
 
     return (
         <div>
-            <div className='alert alert-primary'>
+            <div className='alert alert-secondary'>
                 <div className="input-group mb-3" style={{ marginLeft: '2rem' }}>
-                    <select className="custom-select" id="inputGroupSelect03" onChange={(event) => changeCurrency(event.target.value)}>
+                    <select style={{ backgroundColor:'#94e59b', color:'white' }} className="custom-select" id="inputGroupSelect03" onChange={(event) => changeCurrency(event.target.value)}>
                         <option value="£" name="Pound">£ Pound</option>
                         <option value="$" name="Dollar">$ Dollar</option>
                         <option value="€" name="Euro">€ Euro</option>
