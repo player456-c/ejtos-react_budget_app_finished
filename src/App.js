@@ -36,12 +36,18 @@ const App = () => {
                     <div className='col-sm'>
                         <Currency />
                     </div>
-                       
+
+                    <h2>Allocation</h2>
                     <div className='col-sm'>
                         <ExpenseList />
                     </div>
 
-                    <div className='col-sm'>
+                    <div style={{
+                        position:'absolute',
+                        top:'530px',
+                        left:'4rem'
+                    }} className='col-sm'>
+                        <h2>Change allocation</h2>
                         <AllocationForm />
                     </div>
 

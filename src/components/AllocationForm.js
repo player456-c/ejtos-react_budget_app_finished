@@ -36,7 +36,7 @@ const AllocationForm = (props) => {
 
     return (
         <div>
-            <div className='row'>
+            <div  className='row'>
 
                 <div className="input-group mb-3" style={{ marginLeft: '2rem' }}>
                     <div className="input-group-prepend">
@@ -67,11 +67,11 @@ const AllocationForm = (props) => {
                         type='number'
                         id='cost'
                         value={cost}
-                        style={{ marginLeft: '10px' , size: 10}}
+                        style={{ marginLeft: '5px' , size: 10}}
                         onChange={(event) => setCost(event.target.value)}>
                     </input>
 
-                    <button className="btn btn-primary" onClick={submitEvent} style={{ marginLeft: '2rem' }}>
+                    <button className="btn btn-primary" onClick={submitEvent} style={{ marginLeft: '1rem' }}>
                         Save
                     </button>
                 </div>
