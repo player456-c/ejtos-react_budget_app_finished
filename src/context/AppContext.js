@@ -6,12 +6,17 @@ export const AppReducer = (state, action) => {
     switch (action.type) {
         case 'ADD_EXPENSE':
             let total_budget = 0;
-            total_budget = state.expenses.reduce(
+            /* total_budget = state.expenses.reduce(
                 (previousExp, currentExp) => {
                     return previousExp + currentExp.cost
-                }
-            );
-            total_budget = total_budget + action.payload.cost;
+                },0) */
+            let y=0;
+            for(let i=0;i<state.expenses.lenth;i++){
+                y=y+state.expenses[i].cost;
+            };
+            total_budget = y;
+            
+            /* total_budget = total_budget + action.payload.cost; */
             action.type = "DONE";
             if(total_budget <= state.budget) {
                 total_budget = 0;
@@ -60,7 +65,6 @@ export const AppReducer = (state, action) => {
         case 'SET_BUDGET':
             action.type = "DONE";
             state.budget = action.payload;
-
             return {
                 ...state,
             };

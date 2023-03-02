@@ -9,12 +9,11 @@ import Budget from './components/Budget';
 import Remaining from './components/Remaining';
 import ExpenseTotal from './components/ExpenseTotal';
 import ExpenseList from './components/ExpenseList';
-import ExpenseItem from './components/ExpenseItem';
 import AllocationForm from './components/AllocationForm';
-
+import Currency from './components/Currency';
 
 import { AppProvider } from './context/AppContext';
-import Allocation from './components/Allocation';
+
 const App = () => {
     return (
         <AppProvider>
@@ -24,7 +23,7 @@ const App = () => {
 
                     <div className='col-sm'>
                         <Budget />
-                    </div>       
+                    </div>
 
                     <div className='col-sm'>
                         <Remaining />
@@ -35,15 +34,11 @@ const App = () => {
                     </div>
 
                     <div className='col-sm'>
-                        <Allocation />
-                    </div> 
+                        <Currency />
+                    </div>
                        
                     <div className='col-sm'>
                         <ExpenseList />
-                    </div>        
-
-                    <div className='col-sm'>
-                        <ExpenseItem />
                     </div>
 
                     <div className='col-sm'>
