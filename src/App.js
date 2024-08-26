@@ -19,7 +19,7 @@ const App = () => {
         <AppProvider>
             <div className='container'>
                 <h1 className='mt-3'>Company's Budget Allocation</h1>
-                    <div className='row mt-3'>
+                <div className='row mt-3'>
 
                     <div className='col-sm'>
                         <Budget />
@@ -42,15 +42,14 @@ const App = () => {
                         <ExpenseList />
                     </div>
 
-                    <div style={{
+                    <div /* style={{
                         position:'absolute',
                         top:'530px',
-                        left:'4rem'
-                    }} className='col-sm'>
+                        left:'4rem' //changed className from col-sm to row mt-3
+                    }} */ className='row mt-3'>
                         <h2>Change allocation</h2>
                         <AllocationForm />
                     </div>
-
                 </div>
             </div>
         </AppProvider>
